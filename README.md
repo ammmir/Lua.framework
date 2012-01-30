@@ -8,7 +8,17 @@ that have more features.
 
 ## Usage
 
-Add `Lua.framework` to your project, and:
+Grab the source:
+
+    git clone git://github.com/ammmir/Lua.framework.git
+
+Download and compile [LuaJIT](http://luajit.org/) (2.0.0-beta9):
+
+    curl -s http://luajit.org/download/LuaJIT-2.0.0-beta9.tar.gz | tar zxv
+    cd LuaJIT-2.0.0-beta9
+    make -j amalg
+
+Next, add `Lua.framework` to your project, and:
 
     @import <Lua/Lua.h>
 
