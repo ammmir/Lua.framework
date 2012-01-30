@@ -1,0 +1,341 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2982C09F14D3D84E0079E3AF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2982C09E14D3D84E0079E3AF /* Cocoa.framework */; };
+		2982C0A914D3D84E0079E3AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2982C0A714D3D84E0079E3AF /* InfoPlist.strings */; };
+		2982C0AB14D3D84E0079E3AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2982C0AA14D3D84E0079E3AF /* main.m */; };
+		2982C0AF14D3D84E0079E3AF /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2982C0AD14D3D84E0079E3AF /* Credits.rtf */; };
+		2982C0B214D3D84E0079E3AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2982C0B114D3D84E0079E3AF /* AppDelegate.m */; };
+		2982C0B514D3D84F0079E3AF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2982C0B314D3D84F0079E3AF /* MainMenu.xib */; };
+		2982C0C214D3D8630079E3AF /* Lua.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2982C0C114D3D8630079E3AF /* Lua.framework */; };
+		2982C0CF14D741910079E3AF /* test.lua in Resources */ = {isa = PBXBuildFile; fileRef = 2982C0CE14D741910079E3AF /* test.lua */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2982C09A14D3D84E0079E3AF /* LuaFrameworkTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuaFrameworkTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2982C09E14D3D84E0079E3AF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		2982C0A114D3D84E0079E3AF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		2982C0A214D3D84E0079E3AF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2982C0A314D3D84E0079E3AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2982C0A614D3D84E0079E3AF /* LuaFrameworkTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LuaFrameworkTest-Info.plist"; sourceTree = "<group>"; };
+		2982C0A814D3D84E0079E3AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2982C0AA14D3D84E0079E3AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2982C0AC14D3D84E0079E3AF /* LuaFrameworkTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LuaFrameworkTest-Prefix.pch"; sourceTree = "<group>"; };
+		2982C0AE14D3D84E0079E3AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		2982C0B014D3D84E0079E3AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2982C0B114D3D84E0079E3AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2982C0B414D3D84F0079E3AF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		2982C0C114D3D8630079E3AF /* Lua.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lua.framework; path = "../../../Library/Developer/Xcode/DerivedData/CloudPlay-dlqpsjbhttgmcucjwdxwlhznrcdf/Build/Products/Debug/Lua.framework"; sourceTree = "<group>"; };
+		2982C0CE14D741910079E3AF /* test.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.lua; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2982C09714D3D84E0079E3AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2982C0C214D3D8630079E3AF /* Lua.framework in Frameworks */,
+				2982C09F14D3D84E0079E3AF /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2982C08F14D3D84E0079E3AF = {
+			isa = PBXGroup;
+			children = (
+				2982C0A414D3D84E0079E3AF /* LuaFrameworkTest */,
+				2982C09D14D3D84E0079E3AF /* Frameworks */,
+				2982C09B14D3D84E0079E3AF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2982C09B14D3D84E0079E3AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2982C09A14D3D84E0079E3AF /* LuaFrameworkTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2982C09D14D3D84E0079E3AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2982C0C114D3D8630079E3AF /* Lua.framework */,
+				2982C09E14D3D84E0079E3AF /* Cocoa.framework */,
+				2982C0A014D3D84E0079E3AF /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2982C0A014D3D84E0079E3AF /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2982C0A114D3D84E0079E3AF /* AppKit.framework */,
+				2982C0A214D3D84E0079E3AF /* CoreData.framework */,
+				2982C0A314D3D84E0079E3AF /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		2982C0A414D3D84E0079E3AF /* LuaFrameworkTest */ = {
+			isa = PBXGroup;
+			children = (
+				2982C0B014D3D84E0079E3AF /* AppDelegate.h */,
+				2982C0B114D3D84E0079E3AF /* AppDelegate.m */,
+				2982C0B314D3D84F0079E3AF /* MainMenu.xib */,
+				2982C0CD14D741700079E3AF /* Resources */,
+				2982C0A514D3D84E0079E3AF /* Supporting Files */,
+			);
+			path = LuaFrameworkTest;
+			sourceTree = "<group>";
+		};
+		2982C0A514D3D84E0079E3AF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2982C0A614D3D84E0079E3AF /* LuaFrameworkTest-Info.plist */,
+				2982C0A714D3D84E0079E3AF /* InfoPlist.strings */,
+				2982C0AA14D3D84E0079E3AF /* main.m */,
+				2982C0AC14D3D84E0079E3AF /* LuaFrameworkTest-Prefix.pch */,
+				2982C0AD14D3D84E0079E3AF /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2982C0CD14D741700079E3AF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2982C0CE14D741910079E3AF /* test.lua */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2982C09914D3D84E0079E3AF /* LuaFrameworkTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2982C0B814D3D84F0079E3AF /* Build configuration list for PBXNativeTarget "LuaFrameworkTest" */;
+			buildPhases = (
+				2982C09614D3D84E0079E3AF /* Sources */,
+				2982C09714D3D84E0079E3AF /* Frameworks */,
+				2982C09814D3D84E0079E3AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LuaFrameworkTest;
+			productName = LuaFrameworkTest;
+			productReference = 2982C09A14D3D84E0079E3AF /* LuaFrameworkTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2982C09114D3D84E0079E3AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 2982C09414D3D84E0079E3AF /* Build configuration list for PBXProject "LuaFrameworkTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2982C08F14D3D84E0079E3AF;
+			productRefGroup = 2982C09B14D3D84E0079E3AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2982C09914D3D84E0079E3AF /* LuaFrameworkTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2982C09814D3D84E0079E3AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2982C0A914D3D84E0079E3AF /* InfoPlist.strings in Resources */,
+				2982C0AF14D3D84E0079E3AF /* Credits.rtf in Resources */,
+				2982C0B514D3D84F0079E3AF /* MainMenu.xib in Resources */,
+				2982C0CF14D741910079E3AF /* test.lua in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2982C09614D3D84E0079E3AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2982C0AB14D3D84E0079E3AF /* main.m in Sources */,
+				2982C0B214D3D84E0079E3AF /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2982C0A714D3D84E0079E3AF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2982C0A814D3D84E0079E3AF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2982C0AD14D3D84E0079E3AF /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2982C0AE14D3D84E0079E3AF /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		2982C0B314D3D84F0079E3AF /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2982C0B414D3D84F0079E3AF /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2982C0B614D3D84F0079E3AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		2982C0B714D3D84F0079E3AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2982C0B914D3D84F0079E3AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../Lua\"",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/CloudPlay-dlqpsjbhttgmcucjwdxwlhznrcdf/Build/Products/Debug\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LuaFrameworkTest/LuaFrameworkTest-Prefix.pch";
+				INFOPLIST_FILE = "LuaFrameworkTest/LuaFrameworkTest-Info.plist";
+				OTHER_LDFLAGS = (
+					"-pagezero_size",
+					10000,
+					"-image_base",
+					100000000,
+					"-pagezero_size",
+					10000,
+					"-image_base",
+					100000000,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2982C0BA14D3D84F0079E3AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../Lua\"",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/CloudPlay-dlqpsjbhttgmcucjwdxwlhznrcdf/Build/Products/Debug\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LuaFrameworkTest/LuaFrameworkTest-Prefix.pch";
+				INFOPLIST_FILE = "LuaFrameworkTest/LuaFrameworkTest-Info.plist";
+				OTHER_LDFLAGS = (
+					"-pagezero_size",
+					10000,
+					"-image_base",
+					100000000,
+					"-pagezero_size",
+					10000,
+					"-image_base",
+					100000000,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2982C09414D3D84E0079E3AF /* Build configuration list for PBXProject "LuaFrameworkTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2982C0B614D3D84F0079E3AF /* Debug */,
+				2982C0B714D3D84F0079E3AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2982C0B814D3D84F0079E3AF /* Build configuration list for PBXNativeTarget "LuaFrameworkTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2982C0B914D3D84F0079E3AF /* Debug */,
+				2982C0BA14D3D84F0079E3AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2982C09114D3D84E0079E3AF /* Project object */;
+}
