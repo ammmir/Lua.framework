@@ -30,7 +30,7 @@ to import the interface. To run a Lua script, for example:
 
 Set up the script to define global variables:
 
-    LuaScript *script = [Lua luaScriptWithContentsOfURL:scriptURL];
+    LuaScript *script = [Lua luaScriptWithContentsOfFile:@"/tmp/foo.lua"];
     [script run];
 
 And finally call your function:
