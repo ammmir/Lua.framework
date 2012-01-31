@@ -18,11 +18,11 @@ Download and compile [LuaJIT](http://luajit.org/) (2.0.0-beta9):
     cd LuaJIT-2.0.0-beta9
     make -j amalg
 
-Next, add `Lua.framework` to your project, and:
+Next, add `Lua.framework` to your project, and bring in the interface:
 
-    @import <Lua/Lua.h>
+    #import <Lua/Lua.h>
 
-to import the interface. To run a Lua script, for example:
+To run a Lua script, for example:
 
     function hello(s)
       return "hello " .. s
