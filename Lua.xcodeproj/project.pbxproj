@@ -286,6 +286,7 @@
 				GCC_PREFIX_HEADER = "Lua/Lua-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../LuaJIT-2.0.0-beta9/src\"";
 				INFOPLIST_FILE = "Lua/Lua-Info.plist";
+				INSTALL_PATH = "@loader_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../LuaJIT-2.0.0-beta9/src\"";
 				OTHER_LDFLAGS = "\"$(SRCROOT)/../LuaJIT-2.0.0-beta9/src/libluajit.a\"";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -303,6 +304,7 @@
 				GCC_PREFIX_HEADER = "Lua/Lua-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../LuaJIT-2.0.0-beta9/src\"";
 				INFOPLIST_FILE = "Lua/Lua-Info.plist";
+				INSTALL_PATH = "@loader_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../LuaJIT-2.0.0-beta9/src\"";
 				OTHER_LDFLAGS = "\"$(SRCROOT)/../LuaJIT-2.0.0-beta9/src/libluajit.a\"";
 				PRODUCT_NAME = "$(TARGET_NAME)";

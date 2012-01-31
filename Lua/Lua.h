@@ -12,6 +12,6 @@
 
 @interface Lua : NSObject
 
-+ (LuaScript *)luaScriptWithContentsOfURL:(NSURL *)aURL;
++ (LuaScript *)luaScriptWithContentsOfFile:(NSString *)path;
 
 @end

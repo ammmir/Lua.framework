@@ -14,6 +14,8 @@
 
 @implementation LuaScript
 
+@synthesize scriptPath, packagePath;
+
 lua_State *L;
 
 - (id)init {
@@ -22,15 +24,8 @@ lua_State *L;
         
         if(L == NULL) {
             printf("error initing lua!\n");
+            return nil;
         }
-    }
-    
-    return self;
-}
-
-- (id)initWithURL:(NSURL *)aURL {
-    if(self = [self init]) {
-        scriptPath = [[aURL absoluteString] cStringUsingEncoding:NSUTF8StringEncoding];
     }
     
     return self;
@@ -47,15 +42,18 @@ lua_State *L;
     lua_getglobal(L, "package");
     lua_getfield(L, -1, "path"); // top of the stack
     const char *path = lua_tostring(L, -1);
-    NSMutableString *newPath = [NSMutableString stringWithCString:path encoding:NSUTF8StringEncoding];
-    [newPath appendFormat:@";%@", @"/Users/amir/src/lua-playground/?.lua"];
+    
+    //NSMutableString *newPath = [NSMutableString stringWithCString:path encoding:NSUTF8StringEncoding];
+    //[newPath appendFormat:@";%@", packagePath];
+    NSString *newPath = [NSString stringWithFormat:@"%@;", packagePath];
+    
     lua_pop(L, 1);
     lua_pushstring(L, [newPath cStringUsingEncoding:NSUTF8StringEncoding]);
     lua_setfield(L, -2, "path");
     lua_pop(L, 1);
     
-    if(luaL_dofile(L, scriptPath) == 1) {
-        NSLog(@"error running lua script: %s", scriptPath);
+    if(luaL_dofile(L, [scriptPath cStringUsingEncoding:NSUTF8StringEncoding]) == 1) {
+        NSLog(@"error running lua script: %@", scriptPath);
     }
 }
 

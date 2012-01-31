@@ -13,9 +13,11 @@
 @synthesize window = _window;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    NSURL *scriptURL = [NSURL URLWithString:[[NSBundle mainBundle] pathForResource:@"test" ofType:@"lua"]];    
+    LuaScript *script = [Lua luaScriptWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"test" ofType:@"lua"]];
     
-    LuaScript *script = [Lua luaScriptWithContentsOfURL:scriptURL];
+    // override package.path (default is Resources dir inside the main bundle)
+    //script.packagePath = @"/foo/bar/?.lua";
+    
     [script run]; // prime the script to define globals
     
     // call a function with one argument, ignoring return value

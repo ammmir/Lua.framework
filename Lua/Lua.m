@@ -10,8 +10,12 @@
 
 @implementation Lua
 
-+ (LuaScript *)luaScriptWithContentsOfURL:(NSURL *)aURL {
-    return [[LuaScript alloc] initWithURL:aURL];
++ (LuaScript *)luaScriptWithContentsOfFile:(NSString *)path {
+    LuaScript *script = [[LuaScript alloc] init];
+    script.scriptPath = path;
+    script.packagePath = [NSString stringWithFormat:@"%@/?.lua", [[NSBundle mainBundle] resourcePath]];
+    
+    return script;
 }
 
 @end

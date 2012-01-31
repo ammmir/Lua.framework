@@ -9,11 +9,14 @@
 #import <Foundation/Foundation.h>
 
 @interface LuaScript : NSObject {
-    const char *scriptPath;
+    NSString *scriptPath;
+    NSString *packagePath;
 }
 
-- (id)initWithURL:(NSURL *)aURL;
 - (void)run;
 - (id)callFunction:(NSString *)aName withArguments:(id)firstObj, ... NS_REQUIRES_NIL_TERMINATION;
+
+@property (nonatomic, retain) NSString *scriptPath;
+@property (nonatomic, retain) NSString *packagePath;
 
 @end
