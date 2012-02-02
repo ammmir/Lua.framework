@@ -57,13 +57,14 @@ lua_State *L;
     lua_getfield(L, -1, "cpath"); // top of the stack
     path = lua_tostring(L, -1);
     
-    newPath = [NSString stringWithFormat:@"%@;", packagePath];
+    newPath = [NSString stringWithFormat:@"%@;", packageCpath];
     
     lua_pop(L, 1);
     lua_pushstring(L, [newPath cStringUsingEncoding:NSUTF8StringEncoding]);
     lua_setfield(L, -2, "cpath");
     lua_pop(L, 1);
     
+    // run the script
     if(luaL_dofile(L, [scriptPath cStringUsingEncoding:NSUTF8StringEncoding]) == 1) {
         NSLog(@"error running lua script: %@", scriptPath);
     }
