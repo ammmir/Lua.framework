@@ -14,6 +14,7 @@
     LuaScript *script = [[LuaScript alloc] init];
     script.scriptPath = path;
     script.packagePath = [NSString stringWithFormat:@"%@/?.lua", [[NSBundle mainBundle] resourcePath]];
+    script.packageCpath = [NSString stringWithFormat:@"%@/?.so", [[NSBundle mainBundle] resourcePath]];
     
     return script;
 }

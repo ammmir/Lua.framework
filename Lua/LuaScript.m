@@ -14,7 +14,7 @@
 
 @implementation LuaScript
 
-@synthesize scriptPath, packagePath;
+@synthesize scriptPath, packagePath, packageCpath;
 
 lua_State *L;
 
@@ -50,6 +50,18 @@ lua_State *L;
     lua_pop(L, 1);
     lua_pushstring(L, [newPath cStringUsingEncoding:NSUTF8StringEncoding]);
     lua_setfield(L, -2, "path");
+    lua_pop(L, 1);
+    
+    // set package.cpath for native modules
+    lua_getglobal(L, "package");
+    lua_getfield(L, -1, "cpath"); // top of the stack
+    path = lua_tostring(L, -1);
+    
+    newPath = [NSString stringWithFormat:@"%@;", packagePath];
+    
+    lua_pop(L, 1);
+    lua_pushstring(L, [newPath cStringUsingEncoding:NSUTF8StringEncoding]);
+    lua_setfield(L, -2, "cpath");
     lua_pop(L, 1);
     
     if(luaL_dofile(L, [scriptPath cStringUsingEncoding:NSUTF8StringEncoding]) == 1) {

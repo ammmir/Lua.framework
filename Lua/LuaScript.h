@@ -11,6 +11,7 @@
 @interface LuaScript : NSObject {
     NSString *scriptPath;
     NSString *packagePath;
+    NSString *packageCpath;
 }
 
 - (void)run;
@@ -18,5 +19,6 @@
 
 @property (nonatomic, retain) NSString *scriptPath;
 @property (nonatomic, retain) NSString *packagePath;
+@property (nonatomic, retain) NSString *packageCpath;
 
 @end

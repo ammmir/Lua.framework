@@ -18,6 +18,9 @@
     // override package.path (default is Resources dir inside the main bundle)
     //script.packagePath = @"/foo/bar/?.lua";
     
+    // override package.cpath for native C modules (default is Resources dir inside the main bundle)
+    //script.packageCpath = @"/foo/bar/?.so";
+    
     [script run]; // prime the script to define globals
     
     // call a function with one argument, ignoring return value
