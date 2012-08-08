@@ -168,45 +168,47 @@ lua_State *L;
 }
 
 - (id)callFunction:(NSString *)aName withArguments:(id)firstObj, ... {
-    va_list args;
-    va_start(args, firstObj);
-    int count = 0;
-    
-    lua_getglobal(L, [aName cStringUsingEncoding:NSUTF8StringEncoding]);
-    
-    for(id arg = firstObj; arg != nil; arg = va_arg(args, id)) {
-        count++;
-        [self pushObjectToLua:arg withArrayIndex:-1 withTableKey:nil];
-    }
-    
-    va_end(args);
-    
-    int err;
-    
-    if((err = lua_pcall(L, count, 1, 0)) != 0) {
-        switch(err) {
-            case LUA_ERRRUN:
-                NSLog(@"Lua: runtime error");
-                break;
-                
-            case LUA_ERRMEM:
-                NSLog(@"Lua: memory allocation error");
-                break;
-                
-            case LUA_ERRERR:
-                NSLog(@"Lua: error handler error");
-                break;
-                
-            default:
-                NSLog(@"Lua: unknown error");
-                return nil;
+    @synchronized(self) {
+        va_list args;
+        va_start(args, firstObj);
+        int count = 0;
+        
+        lua_getglobal(L, [aName cStringUsingEncoding:NSUTF8StringEncoding]);
+        
+        for(id arg = firstObj; arg != nil; arg = va_arg(args, id)) {
+            count++;
+            [self pushObjectToLua:arg withArrayIndex:-1 withTableKey:nil];
         }
         
-        NSLog(@"Lua: %s", lua_tostring(L, -1));
-        return nil;
+        va_end(args);
+        
+        int err;
+        
+        if((err = lua_pcall(L, count, 1, 0)) != 0) {
+            switch(err) {
+                case LUA_ERRRUN:
+                    NSLog(@"Lua: runtime error");
+                    break;
+                    
+                case LUA_ERRMEM:
+                    NSLog(@"Lua: memory allocation error");
+                    break;
+                    
+                case LUA_ERRERR:
+                    NSLog(@"Lua: error handler error");
+                    break;
+                    
+                default:
+                    NSLog(@"Lua: unknown error");
+                    return nil;
+            }
+            
+            NSLog(@"Lua: %s", lua_tostring(L, -1));
+            return nil;
+        }
+        
+        return [self popObjectFromLua];
     }
-    
-    return [self popObjectFromLua];
 }
 
 @end
